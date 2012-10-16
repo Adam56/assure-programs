@@ -1,0 +1,81 @@
+html {font-size:100.01%; }
+
+body {font-size: 100%; font-family: verdana, arial, sans-serif}
+
+p {@include news; font-size: .75em; color: $var-black; margin-bottom: .875em; line-height: 1.25em}
+
+
+a {
+	&:link, &:visited {color: $var-blue; }
+	&:hover{color: $var-navyblue; text-decoration: none}
+}
+
+h1, h2, h3, h4, h5, h6 {}
+
+h1{}
+
+h2{@include news; font-style: italic; font-size: 1.125em; color: $var-blue; margin-bottom: 1em}
+h3{@include news; font-size: .75em; color: $var-black; line-height: 1.5em}
+h4{@include news; font-size: 1em; color: $var-blue; font-weight: bold}
+h5{@include news; font-size: 1em; line-height: 1.25em}
+h6{@include news; font-size: .875em; font-weight: bold; margin-bottom: 6px;}
+
+em{font-style: italic}
+strong{text-transform: uppercase}
+b{font-weight: bold}
+small{font-size: .8em}
+
+
+
+nav#main{
+	ul{
+		li{
+			a{@include news; font-size: .875em; text-decoration: none;
+				&.active{color: $var-navyblue;
+					&:hover{cursor: normal}
+				}
+				&:hover{}
+			}
+		}
+	}
+}
+
+article.secondary-content{
+	.center-column{
+		h4{margin-bottom: 10px}
+		ul{@include news; list-style: square url(../PublishingImages/bullet.gif) outside; padding-left: 1em; margin-bottom: 1em;
+			&.double-indent{margin-left: 37px}
+			li{font-size: .75em; line-height: 1.25em; margin: 0 0 6px 34px; color: $var-black;}
+		}
+		p{margin-left: 34px}
+	}
+}
+
+
+
+.isi{
+	h2, h3{font-weight: bold; font-style: normal !important; color: $var-black; margin-bottom: .75em !important; line-height: 1.25em !important}
+	h2{font-size: .875em;}
+	h3{font-size: .75em; margin-bottom: .5em !important;}
+	h4{font-size: .75em; color: $var-blue; margin-bottom: .5em !important}
+	p{}
+	ul{@include news; list-style: square url(../PublishingImages/list-style.png) outside; padding-left: 1em;
+		li{font-size: .75em; line-height: 1.25em; margin: 0 0 20px 0; color: $var-black;}
+	}
+	#please-see{
+		span{color: $var-blue; text-decoration: underline; cursor: pointer;
+			&:hover{color: $var-navyblue; text-decoration: none}
+		}
+	}
+}
+
+
+footer{
+	img{}
+	p{
+		span{display: block; float: left; margin-right: 30px;
+			&:last-child{margin-right: 0}
+		}
+	}
+}
+
